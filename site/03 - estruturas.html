@@ -29,7 +29,7 @@
     
     
       
-        <title>03 estruturas - Projeto CTT-AP2</title>
+        <title>03 - Estruturas de Controle - Projeto CTT-AP2</title>
       
     
     
@@ -84,7 +84,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#03-estruturas-de-controle" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +101,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="./index.md" title="Projeto CTT-AP2" class="md-header__button md-logo" aria-label="Projeto CTT-AP2" data-md-component="logo">
+    <a href="./index.html" title="Projeto CTT-AP2" class="md-header__button md-logo" aria-label="Projeto CTT-AP2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
@@ -120,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              03   estruturas
+              03 - Estruturas de Controle
             
           </span>
         </div>
@@ -199,7 +200,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="./index.md" title="Projeto CTT-AP2" class="md-nav__button md-logo" aria-label="Projeto CTT-AP2" data-md-component="logo">
+    <a href="./index.html" title="Projeto CTT-AP2" class="md-nav__button md-logo" aria-label="Projeto CTT-AP2" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
@@ -217,7 +218,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./index.md" class="md-nav__link">
+      <a href="./index.html" class="md-nav__link">
         
   
   
@@ -301,6 +302,8 @@
       
       
       
+        
+      
       
       <a href="03%20-%20estruturas.html" class="md-nav__link md-nav__link--active">
         
@@ -355,7 +358,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./05 - structs.md" class="md-nav__link">
+      <a href="./05%20-%20structs.html" class="md-nav__link">
         
   
   
@@ -381,7 +384,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./06 - errors.md" class="md-nav__link">
+      <a href="./06%20-%20errors.html" class="md-nav__link">
         
   
   
@@ -407,7 +410,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./07 - goroutines.md" class="md-nav__link">
+      <a href="./07%20-%20goroutines.html" class="md-nav__link">
         
   
   
@@ -433,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./08 - channels.md" class="md-nav__link">
+      <a href="./08%20-%20channels.html" class="md-nav__link">
         
   
   
@@ -459,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./09 - gomodules.md" class="md-nav__link">
+      <a href="./09%20-%20gomodules.html" class="md-nav__link">
         
   
   
@@ -485,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./10 - testes.md" class="md-nav__link">
+      <a href="./10%20-%20testes.html" class="md-nav__link">
         
   
   
@@ -518,6 +521,8 @@
                     
                     
                     
+                      
+                    
                     
                   
                   <div class="md-sidebar__inner">
@@ -527,6 +532,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
+  
+    
   
   
 </nav>
@@ -550,9 +557,32 @@
                 
                   
 
-  <h1 id="__skip">03   estruturas</h1>
+<h1 id="03-estruturas-de-controle">03 - Estruturas de Controle<a class="headerlink" href="#03-estruturas-de-controle" title="Permanent link">&para;</a></h1>
+<p>No Go, o fluxo de controle é direto. Uma característica única: <strong>não existe o laço <code>while</code></strong>, o <code>for</code> é utilizado para todas as repetições.</p>
+<div class="admonition info">
+<p class="admonition-title">Sintaxe sem parênteses</p>
+<p>Em Go, você não utiliza parênteses <code>()</code> em condições de <code>if</code> ou <code>for</code>.</p>
+</div>
+<p>```go
+package main
+import "fmt"</p>
+<p>func main() {
+    estoque := 10</p>
+<div class="language-text highlight"><pre><span></span><code>// If/Else
+if estoque &gt; 0 {
+    fmt.Println(&quot;Produto em estoque&quot;)
+} else {
+    fmt.Println(&quot;Esgotado&quot;)
+}
 
-
+// For (como While)
+i := 0
+for i &lt; 3 {
+    fmt.Println(&quot;Tentativa:&quot;, i)
+    i++
+}
+</code></pre></div>
+<p>}</p>
 
 
 
