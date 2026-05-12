@@ -1,3 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/index.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/01%20-%20intro.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/02%20-%20sintaxe.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/03%20-%20estruturas.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/04%20-%20colecoes.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/05%20-%20structs.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/06%20-%20errors.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/07%20-%20goroutines.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/08%20-%20channels.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/09%20-%20gomodules.html</loc>
+      </url>
+      <url>
+        <loc>https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/10%20-%20testes.html</loc>
+      </url>
 </urlset>

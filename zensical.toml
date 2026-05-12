@@ -11,7 +11,9 @@
 # The site_name is shown in the page header and the browser window title
 #
 # Read more: https://zensical.org/docs/setup/basics/#site_name
-site_name = "Documentation"
+site_name = "Projeto CTT-AP2"
+use_directory_urls = false  # Isso ajuda a evitar erros de rota em servidores locais
+site_url = "https://impacta-gb.github.io/projeto-ctt-ap2-pimentex"
 
 # The site_description is included in the HTML head and should contain a
 # meaningful description of the site content for use by search engines.
@@ -44,10 +46,22 @@ Copyright &copy; 2026 The authors
 # can be defined using TOML syntax.
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-# nav = [
-#   { "Get started" = "index.md" },
-#   { "Markdown in 5min" = "markdown.md" },
-# ]
+nav = [
+    { "🏠 Projeto CTT-AP2" = "index.md" },
+    { "01 - Introdução e instalação" = "01 - intro.md" },
+    { "02 - Sintaxe e Variáveis" = "02 - sintaxe.md" },
+    { "03 - Estruturas de Controle" = "03 - estruturas.md" },
+    { "04 - Arrays, Slices e Maps" = "04 - colecoes.md" },
+    { "05 - Structs e Métodos" = "05 - structs.md" },
+    { "06 - Tratamento de Erros" = "06 - errors.md" },
+    { "07 - Goroutines" = "07 - goroutines.md" },
+    { "08 - Channels" = "08 - channels.md" },
+    { "09 - Go Modules" = "09 - gomodules.md" },
+    { "10 - Testes Automatizados" = "10 - testes.md" }
+]
+
+[theme]
+name = "material"
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of

@@ -1,173 +1,37 @@
+# Projeto CTT-AP2
+
+Bem-vindo à documentação oficial da linguagem Go, desenvolvida pelo grupo **Impacta-GB (Pimentex)**. Este site foi construído utilizando o gerador estático **Zensical** e automatizado via **GitHub Actions**.
+
+!!! tip "Objetivo do Projeto"
+    Criar uma base de conhecimento técnica e robusta sobre Go, aplicando fluxos de trabalho colaborativos (Feature Branches e Pull Requests) e integração contínua (CI/CD).
+
 ---
-icon: lucide/rocket
+
+## 📚 Módulos de Aprendizado
+
+Utilize a tabela abaixo para navegar pelos tópicos da linguagem. Cada seção foi revisada e validada através de nosso pipeline de CI/CD.
+
+| Ordem | Tópico da Documentação | Descrição Breve |
+| :---: | :--- | :--- |
+| 1 | [**Introdução e Instalação**](01 - intro.md) | Primeiros passos e configuração do ambiente Go. |
+| 2 | [**Sintaxe Básica e Variáveis**](02 - sintaxe.md) | Tipagem, declarações e estrutura de código. |
+| 3 | [**Estruturas de Controle**](03 - ifForswitch.md) | Controle de fluxo com If, For e Switch. |
+| 4 | [**Arrays, Slices e Maps**](04 - colecoes.md) | Como lidar com coleções de dados no Go. |
+| 5 | [**Structs e Métodos**](05 - structs.md) | Orientação a objetos e estruturas customizadas. |
+| 6 | [**Tratamento de Erros**](06 - errors.md) | Boas práticas para lidar com exceções. |
+| 7 | [**Concorrência: Goroutines**](07 - goroutines.md) | O poder do processamento paralelo. |
+| 8 | [**Concorrência: Channels**](08 - channels.md) | Comunicação entre processos concorrentes. |
+| 9 | [**Go Modules**](09 - gomodules.md) | Gerenciamento de pacotes e dependências. |
+| 10 | [**Testes Automatizados**](10 - testes.md) | Garantindo a qualidade do código Go. |
+
 ---
 
-# Get started
+## 🛠️ Sobre a Infraestrutura
 
-For full documentation visit [zensical.org](https://zensical.org/docs/).
+Este projeto utiliza uma arquitetura de **CI/CD moderna**:
+- **Matrix Strategy:** Validação do build em Python 3.10 e 3.11.
+- **Carga Otimizada:** Uso de cache para dependências `pip`.
+- **Deploy Seguro:** Separação entre os estágios de *Build* e *Deploy*.
 
-## Commands
-
-* [`zensical new`][new] - Create a new project
-* [`zensical serve`][serve] - Start local web server
-* [`zensical build`][build] - Build your site
-
-  [new]: https://zensical.org/docs/usage/new/
-  [serve]: https://zensical.org/docs/usage/preview/
-  [build]: https://zensical.org/docs/usage/build/
-
-## Examples
-
-### Admonitions
-
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/)
-
-!!! note
-
-    This is a **note** admonition. Use it to provide helpful information.
-
-!!! warning
-
-    This is a **warning** admonition. Be careful!
-
-### Details
-
-> Go to [documentation](https://zensical.org/docs/authoring/admonitions/#collapsible-blocks)
-
-??? info "Click to expand for more info"
-
-    This content is hidden until you click to expand it.
-    Great for FAQs or long explanations.
-
-## Code Blocks
-
-> Go to [documentation](https://zensical.org/docs/authoring/code-blocks/)
-
-``` python hl_lines="2" title="Code blocks"
-def greet(name):
-    print(f"Hello, {name}!") # (1)!
-
-greet("Python")
-```
-
-1.  > Go to [documentation](https://zensical.org/docs/authoring/code-blocks/#code-annotations)
-
-    Code annotations allow to attach notes to lines of code.
-
-Code can also be highlighted inline: `#!python print("Hello, Python!")`.
-
-## Content tabs
-
-> Go to [documentation](https://zensical.org/docs/authoring/content-tabs/)
-
-=== "Python"
-
-    ``` python
-    print("Hello from Python!")
-    ```
-
-=== "Rust"
-
-    ``` rs
-    println!("Hello from Rust!");
-    ```
-
-## Diagrams
-
-> Go to [documentation](https://zensical.org/docs/authoring/diagrams/)
-
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
-
-## Footnotes
-
-> Go to [documentation](https://zensical.org/docs/authoring/footnotes/)
-
-Here's a sentence with a footnote.[^1]
-
-Hover it, to see a tooltip.
-
-[^1]: This is the footnote.
-
-
-## Formatting
-
-> Go to [documentation](https://zensical.org/docs/authoring/formatting/)
-
-- ==This was marked (highlight)==
-- ^^This was inserted (underline)^^
-- ~~This was deleted (strikethrough)~~
-- H~2~O
-- A^T^A
-- ++ctrl+alt+del++
-
-## Icons, Emojis
-
-> Go to [documentation](https://zensical.org/docs/authoring/icons-emojis/)
-
-* :sparkles: `:sparkles:`
-* :rocket: `:rocket:`
-* :tada: `:tada:`
-* :memo: `:memo:`
-* :eyes: `:eyes:`
-
-## Maths
-
-> Go to [documentation](https://zensical.org/docs/authoring/math/)
-
-$$
-\cos x=\sum_{k=0}^{\infty}\frac{(-1)^k}{(2k)!}x^{2k}
-$$
-
-!!! warning "Needs configuration"
-    Note that MathJax is included via a `script` tag on this page and is not
-    configured in the generated default configuration to avoid including it
-    in a pages that do not need it. See the documentation for details on how
-    to configure it on all your pages if they are more Maths-heavy than these
-    simple starter pages.
-
-<script id="MathJax-script" src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script>
-  window.MathJax = {
-    tex: {
-      inlineMath: [["\\(", "\\)"]],
-      displayMath: [["\\[", "\\]"]],
-      processEscapes: true,
-      processEnvironments: true
-    },
-    options: {
-      ignoreHtmlClass: ".*|",
-      processHtmlClass: "arithmatex"
-    }
-  };
-
-  document$.subscribe(() => {
-    MathJax.startup.output.clearCache()
-    MathJax.typesetClear()
-    MathJax.texReset()
-    MathJax.typesetPromise()
-  })
-</script>
-
-## Task Lists
-
-> Go to [documentation](https://zensical.org/docs/authoring/lists/#using-task-lists)
-
-* [x] Install Zensical
-* [x] Configure `zensical.toml`
-* [x] Write amazing documentation
-* [ ] Deploy anywhere
-
-## Tooltips
-
-> Go to [documentation](https://zensical.org/docs/authoring/tooltips/)
-
-[Hover me][example]
-
-  [example]: https://example.com "I'm a tooltip!"
+---
+*Gerado para a disciplina de Cloud & DevOps - Impacta 2026.*
