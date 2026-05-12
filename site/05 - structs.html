@@ -29,7 +29,7 @@
     
     
       
-        <title>05 structs - Projeto CTT-AP2</title>
+        <title>05 - Structs e Métodos - Projeto CTT-AP2</title>
       
     
     
@@ -84,7 +84,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#05-structs-e-metodos" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              05   structs
+              05 - Structs e Métodos
             
           </span>
         </div>
@@ -353,6 +354,8 @@
       
       
       
+        
+      
       
       <a href="05%20-%20structs.html" class="md-nav__link md-nav__link--active">
         
@@ -518,6 +521,8 @@
                     
                     
                     
+                      
+                    
                     
                   
                   <div class="md-sidebar__inner">
@@ -527,6 +532,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
+  
+    
   
   
 </nav>
@@ -550,9 +557,23 @@
                 
                   
 
-  <h1 id="__skip">05   structs</h1>
-
-
+<h1 id="05-structs-e-metodos">05 - Structs e Métodos<a class="headerlink" href="#05-structs-e-metodos" title="Permanent link">&para;</a></h1>
+<p>Go não possui classes, mas utiliza <code>structs</code> para agrupar campos de dados e métodos para definir comportamentos.</p>
+<p>```go
+package main
+import "fmt"</p>
+<p>type Pedido struct {
+    ID    int
+    Total float64
+}</p>
+<p>// Método associado à struct Pedido
+func (p Pedido) Exibir() {
+    fmt.Printf("Pedido #%d - Total: R$%.2f\n", p.ID, p.Total)
+}</p>
+<p>func main() {
+    meuPedido := Pedido{ID: 123, Total: 250.50}
+    meuPedido.Exibir()
+}</p>
 
 
 

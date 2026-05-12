@@ -29,7 +29,7 @@
     
     
       
-        <title>06 errors - Projeto CTT-AP2</title>
+        <title>06 - Tratamento de Erros - Projeto CTT-AP2</title>
       
     
     
@@ -84,7 +84,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#06-tratamento-de-erros" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              06   errors
+              06 - Tratamento de Erros
             
           </span>
         </div>
@@ -379,6 +380,8 @@
       
       
       
+        
+      
       
       <a href="06%20-%20errors.html" class="md-nav__link md-nav__link--active">
         
@@ -518,6 +521,8 @@
                     
                     
                     
+                      
+                    
                     
                   
                   <div class="md-sidebar__inner">
@@ -527,6 +532,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
+  
+    
   
   
 </nav>
@@ -550,9 +557,19 @@
                 
                   
 
-  <h1 id="__skip">06   errors</h1>
-
-
+<h1 id="06-tratamento-de-erros">06 - Tratamento de Erros<a class="headerlink" href="#06-tratamento-de-erros" title="Permanent link">&para;</a></h1>
+<p>Em Go, erros são valores retornados pelas funções, e não exceções que interrompem o fluxo inesperadamente.</p>
+<div class="admonition danger">
+<p class="admonition-title">Verificação Obrigatória</p>
+<p>Sempre verifique se <code>err != nil</code> para garantir a resiliência do código.</p>
+</div>
+<p>```go
+func validar(email string) error {
+    if email == "" {
+        return errors.New("email vazio")
+    }
+    return nil
+}</p>
 
 
 

@@ -29,7 +29,7 @@
     
     
       
-        <title>08 channels - Projeto CTT-AP2</title>
+        <title>08 - Channels - Projeto CTT-AP2</title>
       
     
     
@@ -84,7 +84,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#08-channels" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              08   channels
+              08 - Channels
             
           </span>
         </div>
@@ -431,6 +432,8 @@
       
       
       
+        
+      
       
       <a href="08%20-%20channels.html" class="md-nav__link md-nav__link--active">
         
@@ -518,6 +521,8 @@
                     
                     
                     
+                      
+                    
                     
                   
                   <div class="md-sidebar__inner">
@@ -527,6 +532,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
+  
+    
   
   
 </nav>
@@ -550,9 +557,12 @@
                 
                   
 
-  <h1 id="__skip">08   channels</h1>
-
-
+<h1 id="08-channels">08 - Channels<a class="headerlink" href="#08-channels" title="Permanent link">&para;</a></h1>
+<p>Canais são as tubulações que permitem que Goroutines se comuniquem e sincronizem dados de forma segura.</p>
+<p>```go
+ch := make(chan string)
+go func() { ch &lt;- "Dados enviados" }()
+msg := &lt;-ch</p>
 
 
 
