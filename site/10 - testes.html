@@ -27,7 +27,7 @@
     
     
       
-        <title>10 testes - Projeto CTT-AP2</title>
+        <title>10 - Testes Automatizados - Projeto CTT-AP2</title>
       
     
     
@@ -82,7 +82,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#10-testes-automatizados" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10   testes
+              10 - Testes Automatizados
             
           </span>
         </div>
@@ -481,6 +482,8 @@
       
       
       
+        
+      
       
       <a href="10%20-%20testes.html" class="md-nav__link md-nav__link--active">
         
@@ -516,6 +519,8 @@
                     
                     
                     
+                      
+                    
                     
                   
                   <div class="md-sidebar__inner">
@@ -525,6 +530,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
+  
+    
   
   
 </nav>
@@ -548,9 +555,18 @@
                 
                   
 
-  <h1 id="__skip">10   testes</h1>
-
-
+<h1 id="10-testes-automatizados">10 - Testes Automatizados<a class="headerlink" href="#10-testes-automatizados" title="Permanent link">&para;</a></h1>
+<p>Go possui suporte nativo para testes através do pacote <code>testing</code>.</p>
+<div class="admonition success">
+<p class="admonition-title">Comando de Teste</p>
+<p>Rode <code>go test</code> no terminal para executar todas as validações do seu projeto.</p>
+</div>
+<p>```go
+func TestSoma(t *testing.T) {
+    if Soma(2,2) != 4 {
+        t.Error("Falha no teste de soma")
+    }
+}</p>
 
 
 

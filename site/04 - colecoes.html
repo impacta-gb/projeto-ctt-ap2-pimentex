@@ -29,7 +29,7 @@
     
     
       
-        <title>04 colecoes - Projeto CTT-AP2</title>
+        <title>04 - Arrays, Slices e Maps - Projeto CTT-AP2</title>
       
     
     
@@ -84,7 +84,8 @@
     <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
     <div data-md-component="skip">
       
-        <a href="#__skip" class="md-skip">
+        
+        <a href="#04-arrays-slices-e-maps" class="md-skip">
           Skip to content
         </a>
       
@@ -120,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              04   colecoes
+              04 - Arrays, Slices e Maps
             
           </span>
         </div>
@@ -327,6 +328,8 @@
       
       
       
+        
+      
       
       <a href="04%20-%20colecoes.html" class="md-nav__link md-nav__link--active">
         
@@ -518,6 +521,8 @@
                     
                     
                     
+                      
+                    
                     
                   
                   <div class="md-sidebar__inner">
@@ -527,6 +532,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="On this page">
   
   
+  
+    
   
   
 </nav>
@@ -550,9 +557,32 @@
                 
                   
 
-  <h1 id="__skip">04   colecoes</h1>
-
-
+<h1 id="04-arrays-slices-e-maps">04 - Arrays, Slices e Maps<a class="headerlink" href="#04-arrays-slices-e-maps" title="Permanent link">&para;</a></h1>
+<p>Go oferece formas eficientes de agrupar dados.</p>
+<ul>
+<li><strong>Arrays:</strong> Tamanho fixo.</li>
+<li><strong>Slices:</strong> Dinâmicos (mais comuns).</li>
+<li><strong>Maps:</strong> Coleções de chave-valor.</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Use Slices</p>
+<p>Slices são mais flexíveis que Arrays e permitem o uso da função <code>append()</code>.</p>
+</div>
+<p>```go
+package main
+import "fmt"</p>
+<p>func main() {
+    // Slice
+    produtos := []string{"Teclado", "Mouse"}
+    produtos = append(produtos, "Monitor")</p>
+<div class="language-text highlight"><pre><span></span><code>// Map
+precos := map[string]float64{
+    &quot;Teclado&quot;: 150.00,
+    &quot;Mouse&quot;: 50.00,
+}
+fmt.Println(produtos, precos)
+</code></pre></div>
+<p>}</p>
 
 
 
