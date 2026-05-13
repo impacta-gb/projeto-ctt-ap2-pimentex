@@ -15,6 +15,10 @@
         <link rel="canonical" href="https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/02-sintaxe.html">
       
       
+        <link rel="prev" href="./01-intro.html">
+      
+      
+        <link rel="next" href="./03-estruturas.html">
       
       
         
@@ -240,7 +244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./01 - intro.md" class="md-nav__link">
+      <a href="./01-intro.html" class="md-nav__link">
         
   
   
@@ -263,10 +267,36 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="./02 - sintaxe.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  02 - Sintaxe e Variáveis
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="02-sintaxe.html" class="md-nav__link md-nav__link--active">
         
   
   
@@ -281,6 +311,518 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-basica-de-um-programa-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estrutura básica de um programa Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura básica de um programa Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo básico
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entendendo-cada-parte-do-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Entendendo cada parte do código
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comentários em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comentários em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comentario-de-uma-linha" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comentário de uma linha
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentario-de-multiplas-linhas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comentário de múltiplas linhas
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaracao-de-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Declaração de variáveis
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declarando-variaveis-com-var" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Declarando variáveis com <code>var</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declarando variáveis com var">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inferencia-de-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Inferência de tipos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inferência de tipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaracao-curta-com" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Declaração curta com <code>:=</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declaração curta com :=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-primitivos-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tipos primitivos em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos primitivos em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principais-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Principais tipos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabalhando-com-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trabalhando com strings
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabalhando-com-numeros-inteiros" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trabalhando com números inteiros
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com números inteiros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabalhando-com-numeros-decimais" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trabalhando com números decimais
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com números decimais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabalhando-com-booleanos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trabalhando com booleanos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com booleanos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Constantes em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constantes em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiplas-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Múltiplas variáveis
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Múltiplas variáveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zero-values-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zero Values em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zero Values em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatacao-de-saida-com-printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Formatação de saída com <code>Printf</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatação de saída com Printf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principais-formatacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Principais formatações
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convencoes-de-nomenclatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Convenções de nomenclatura
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boas-praticas-com-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Boas práticas com variáveis
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo completo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Próximos passos
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Resumo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -292,7 +834,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./03 - estruturas.md" class="md-nav__link">
+      <a href="./03-estruturas.html" class="md-nav__link">
         
   
   
@@ -318,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./04 - colecoes.md" class="md-nav__link">
+      <a href="./04-colecoes.html" class="md-nav__link">
         
   
   
@@ -344,7 +886,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./05 - structs.md" class="md-nav__link">
+      <a href="./05-structs.html" class="md-nav__link">
         
   
   
@@ -370,7 +912,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./06 - errors.md" class="md-nav__link">
+      <a href="./06-errors.html" class="md-nav__link">
         
   
   
@@ -396,7 +938,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./07 - goroutines.md" class="md-nav__link">
+      <a href="./07-goroutines.html" class="md-nav__link">
         
   
   
@@ -422,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./08 - channels.md" class="md-nav__link">
+      <a href="./08-channels.html" class="md-nav__link">
         
   
   
@@ -448,7 +990,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./09 - gomodules.md" class="md-nav__link">
+      <a href="./09-gomodules.html" class="md-nav__link">
         
   
   
@@ -474,7 +1016,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./10 - testes.md" class="md-nav__link">
+      <a href="./10-testes.html" class="md-nav__link">
         
   
   
@@ -534,10 +1076,490 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#declarando-variaveis-na-pratica" class="md-nav__link">
+  <a href="#estrutura-basica-de-um-programa-go" class="md-nav__link">
     <span class="md-ellipsis">
       <span class="md-typeset">
-        Declarando Variáveis na Prática
+        Estrutura básica de um programa Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura básica de um programa Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-basico" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo básico
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entendendo-cada-parte-do-codigo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Entendendo cada parte do código
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comentarios-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comentários em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comentários em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comentario-de-uma-linha" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comentário de uma linha
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comentario-de-multiplas-linhas" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Comentário de múltiplas linhas
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaracao-de-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Declaração de variáveis
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declarando-variaveis-com-var" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Declarando variáveis com <code>var</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declarando variáveis com var">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inferencia-de-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Inferência de tipos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Inferência de tipos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#declaracao-curta-com" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Declaração curta com <code>:=</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Declaração curta com :=">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tipos-primitivos-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Tipos primitivos em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Tipos primitivos em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principais-tipos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Principais tipos
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabalhando-com-strings" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trabalhando com strings
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com strings">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabalhando-com-numeros-inteiros" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trabalhando com números inteiros
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com números inteiros">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabalhando-com-numeros-decimais" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trabalhando com números decimais
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com números decimais">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabalhando-com-booleanos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Trabalhando com booleanos
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Trabalhando com booleanos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#constantes-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Constantes em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Constantes em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#multiplas-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Múltiplas variáveis
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Múltiplas variáveis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#zero-values-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Zero Values em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Zero Values em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#formatacao-de-saida-com-printf" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Formatação de saída com <code>Printf</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Formatação de saída com Printf">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#principais-formatacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Principais formatações
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#convencoes-de-nomenclatura" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Convenções de nomenclatura
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boas-praticas-com-variaveis" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Boas práticas com variáveis
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplo-completo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo completo
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proximos-passos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Próximos passos
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resumo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Resumo
       </span>
     </span>
   </a>
@@ -568,31 +1590,469 @@
                   
 
 <h1 id="sintaxe-basica-e-variaveis">Sintaxe Básica e Variáveis<a class="headerlink" href="#sintaxe-basica-e-variaveis" title="Permanent link">&para;</a></h1>
-<p>A linguagem Go possui uma sintaxe limpa e minimalista. Uma das suas maiores características é ser estaticamente tipada, mas possuir um mecanismo inteligente de inferência de tipos.</p>
-<div class="admonition warning">
-<p class="admonition-title">Cuidado com variáveis não utilizadas</p>
-<p>No Go, declarar uma variável e não utilizá-la no código resultará em um <strong>erro de compilação</strong>. O Go foi desenhado para manter o código limpo e livre de desperdícios!</p>
+<p>Após instalar o Go e configurar o ambiente, o próximo passo é compreender a sintaxe básica da linguagem e como declarar variáveis corretamente.</p>
+<p>A sintaxe do Go foi projetada para ser simples, legível e eficiente, reduzindo ambiguidades e facilitando a manutenção do código.</p>
+<hr />
+<h2 id="estrutura-basica-de-um-programa-go">Estrutura básica de um programa Go<a class="headerlink" href="#estrutura-basica-de-um-programa-go" title="Permanent link">&para;</a></h2>
+<p>Todo programa em Go segue uma estrutura inicial padrão.</p>
+<h3 id="exemplo-basico">Exemplo básico<a class="headerlink" href="#exemplo-basico" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">// Função principal do programa</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="c1">// Exibe uma mensagem no terminal</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Olá, mundo!&quot;</span><span class="p">)</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="entendendo-cada-parte-do-codigo">Entendendo cada parte do código<a class="headerlink" href="#entendendo-cada-parte-do-codigo" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>package main</code></td>
+<td>Define o pacote principal</td>
+</tr>
+<tr>
+<td><code>import</code></td>
+<td>Importa bibliotecas</td>
+</tr>
+<tr>
+<td><code>func main()</code></td>
+<td>Função principal executada pelo programa</td>
+</tr>
+<tr>
+<td><code>fmt.Println()</code></td>
+<td>Exibe mensagens no terminal</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Nota Importante</p>
+<p>Todo programa executável em Go precisa obrigatoriamente do pacote <code>main</code> e da função <code>main()</code>.</p>
 </div>
-<h2 id="declarando-variaveis-na-pratica">Declarando Variáveis na Prática<a class="headerlink" href="#declarando-variaveis-na-pratica" title="Permanent link">&para;</a></h2>
-<p>Você pode declarar variáveis de forma explícita usando a palavra reservada <code>var</code>, ou usar o operador de declaração curta <code>:=</code> (que infere o tipo automaticamente e é o mais usado no dia a dia).</p>
-<p>Veja o exemplo abaixo simulando o cadastro de um produto em uma loja:</p>
-<p>```go
-package main</p>
-<p>import "fmt"</p>
-<p>func main() {
-    // Declaração explícita (Longa)
-    var nomeProduto string = "Teclado Mecânico"
-    var quantidade int = 50</p>
-<div class="language-text highlight"><pre><span></span><code>// Declaração curta (Inferência de tipo) - Mais recomendada!
-preco := 299.90
-emEstoque := true
-
-fmt.Println(&quot;Produto:&quot;, nomeProduto)
-fmt.Println(&quot;Quantidade:&quot;, quantidade)
-fmt.Println(&quot;Preço: R$&quot;, preco)
-fmt.Println(&quot;Disponível:&quot;, emEstoque)
-</code></pre></div>
-<p>}</p>
+<hr />
+<h2 id="comentarios-em-go">Comentários em Go<a class="headerlink" href="#comentarios-em-go" title="Permanent link">&para;</a></h2>
+<p>Comentários são utilizados para documentar e explicar o código.</p>
+<h3 id="comentario-de-uma-linha">Comentário de uma linha<a class="headerlink" href="#comentario-de-uma-linha" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// Isto é um comentário</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Go&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<h3 id="comentario-de-multiplas-linhas">Comentário de múltiplas linhas<a class="headerlink" href="#comentario-de-multiplas-linhas" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/*</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cm">Este é um comentário</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cm">de múltiplas linhas</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="cm">*/</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Go&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="declaracao-de-variaveis">Declaração de variáveis<a class="headerlink" href="#declaracao-de-variaveis" title="Permanent link">&para;</a></h2>
+<p>Variáveis são utilizadas para armazenar valores na memória.</p>
+<p>Em Go, existem diferentes formas de declarar variáveis.</p>
+<hr />
+<h2 id="declarando-variaveis-com-var">Declarando variáveis com <code>var</code><a class="headerlink" href="#declarando-variaveis-com-var" title="Permanent link">&para;</a></h2>
+<h3 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">nome</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Pedro&quot;</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">idade</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">22</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nome</span><span class="p">)</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">idade</span><span class="p">)</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="inferencia-de-tipos">Inferência de tipos<a class="headerlink" href="#inferencia-de-tipos" title="Permanent link">&para;</a></h2>
+<p>O Go consegue identificar automaticamente o tipo da variável.</p>
+<h3 id="exemplo_1">Exemplo<a class="headerlink" href="#exemplo_1" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">cidade</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;São Paulo&quot;</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">temperatura</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">25</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">cidade</span><span class="p">)</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">temperatura</span><span class="p">)</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Dica de Ouro</p>
+<p>A inferência de tipos reduz código desnecessário e torna a leitura mais limpa.</p>
+</div>
+<hr />
+<h2 id="declaracao-curta-com">Declaração curta com <code>:=</code><a class="headerlink" href="#declaracao-curta-com" title="Permanent link">&para;</a></h2>
+<p>A forma mais comum de criar variáveis em Go é utilizando <code>:=</code>.</p>
+<h3 id="exemplo_2">Exemplo<a class="headerlink" href="#exemplo_2" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nx">nome</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Maria&quot;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="nx">idade</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">30</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nome</span><span class="p">)</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">idade</span><span class="p">)</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Cuidado</p>
+<p>O operador <code>:=</code> só pode ser utilizado dentro de funções.</p>
+</div>
+<hr />
+<h2 id="tipos-primitivos-em-go">Tipos primitivos em Go<a class="headerlink" href="#tipos-primitivos-em-go" title="Permanent link">&para;</a></h2>
+<p>Go possui diversos tipos primitivos integrados.</p>
+<h3 id="principais-tipos">Principais tipos<a class="headerlink" href="#principais-tipos" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Descrição</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>string</code></td>
+<td>Texto</td>
+<td><code>"Go"</code></td>
+</tr>
+<tr>
+<td><code>int</code></td>
+<td>Número inteiro</td>
+<td><code>10</code></td>
+</tr>
+<tr>
+<td><code>float64</code></td>
+<td>Número decimal</td>
+<td><code>3.14</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td>Verdadeiro ou falso</td>
+<td><code>true</code></td>
+</tr>
+<tr>
+<td><code>byte</code></td>
+<td>Valor binário</td>
+<td><code>255</code></td>
+</tr>
+<tr>
+<td><code>rune</code></td>
+<td>Caracter Unicode</td>
+<td><code>'A'</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="trabalhando-com-strings">Trabalhando com strings<a class="headerlink" href="#trabalhando-com-strings" title="Permanent link">&para;</a></h2>
+<h3 id="exemplo_3">Exemplo<a class="headerlink" href="#exemplo_3" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">    </span><span class="nx">mensagem</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Aprendendo Go&quot;</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">mensagem</span><span class="p">)</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="trabalhando-com-numeros-inteiros">Trabalhando com números inteiros<a class="headerlink" href="#trabalhando-com-numeros-inteiros" title="Permanent link">&para;</a></h2>
+<h3 id="exemplo_4">Exemplo<a class="headerlink" href="#exemplo_4" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nx">idade</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">25</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nx">ano</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">2026</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">idade</span><span class="p">)</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">ano</span><span class="p">)</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="trabalhando-com-numeros-decimais">Trabalhando com números decimais<a class="headerlink" href="#trabalhando-com-numeros-decimais" title="Permanent link">&para;</a></h2>
+<h3 id="exemplo_5">Exemplo<a class="headerlink" href="#exemplo_5" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="nx">preco</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">19.99</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">preco</span><span class="p">)</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="trabalhando-com-booleanos">Trabalhando com booleanos<a class="headerlink" href="#trabalhando-com-booleanos" title="Permanent link">&para;</a></h2>
+<h3 id="exemplo_6">Exemplo<a class="headerlink" href="#exemplo_6" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="nx">ativo</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">    </span><span class="nx">admin</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">ativo</span><span class="p">)</span>
+</span><span id="__span-9-11"><a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">admin</span><span class="p">)</span>
+</span><span id="__span-9-12"><a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="constantes-em-go">Constantes em Go<a class="headerlink" href="#constantes-em-go" title="Permanent link">&para;</a></h2>
+<p>Constantes armazenam valores que não podem ser alterados.</p>
+<h3 id="exemplo_7">Exemplo<a class="headerlink" href="#exemplo_7" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">pi</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mf">3.14159</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">pi</span><span class="p">)</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="admonition note">
+<p class="admonition-title">Nota Importante</p>
+<p>Utilize constantes para valores fixos como PI, URLs, portas e configurações permanentes.</p>
+</div>
+<hr />
+<h2 id="multiplas-variaveis">Múltiplas variáveis<a class="headerlink" href="#multiplas-variaveis" title="Permanent link">&para;</a></h2>
+<p>Go permite declarar várias variáveis ao mesmo tempo.</p>
+<h3 id="exemplo_8">Exemplo<a class="headerlink" href="#exemplo_8" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">        </span><span class="nx">nome</span><span class="w">  </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Carlos&quot;</span>
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">        </span><span class="nx">idade</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="mi">28</span>
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">        </span><span class="nx">ativo</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">    </span><span class="p">)</span>
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nome</span><span class="p">)</span>
+</span><span id="__span-11-14"><a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">idade</span><span class="p">)</span>
+</span><span id="__span-11-15"><a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">ativo</span><span class="p">)</span>
+</span><span id="__span-11-16"><a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="zero-values-em-go">Zero Values em Go<a class="headerlink" href="#zero-values-em-go" title="Permanent link">&para;</a></h2>
+<p>Quando uma variável é criada sem valor inicial, Go atribui automaticamente um valor padrão.</p>
+<table>
+<thead>
+<tr>
+<th>Tipo</th>
+<th>Valor padrão</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>int</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>float64</code></td>
+<td><code>0.0</code></td>
+</tr>
+<tr>
+<td><code>string</code></td>
+<td><code>""</code></td>
+</tr>
+<tr>
+<td><code>bool</code></td>
+<td><code>false</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemplo_9">Exemplo<a class="headerlink" href="#exemplo_9" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>
+</span><span id="__span-12-5"><a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-12-6"><a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>
+</span><span id="__span-12-7"><a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">nome</span><span class="w"> </span><span class="kt">string</span>
+</span><span id="__span-12-8"><a id="__codelineno-12-8" name="__codelineno-12-8" href="#__codelineno-12-8"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">idade</span><span class="w"> </span><span class="kt">int</span>
+</span><span id="__span-12-9"><a id="__codelineno-12-9" name="__codelineno-12-9" href="#__codelineno-12-9"></a><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">ativo</span><span class="w"> </span><span class="kt">bool</span>
+</span><span id="__span-12-10"><a id="__codelineno-12-10" name="__codelineno-12-10" href="#__codelineno-12-10"></a>
+</span><span id="__span-12-11"><a id="__codelineno-12-11" name="__codelineno-12-11" href="#__codelineno-12-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">nome</span><span class="p">)</span>
+</span><span id="__span-12-12"><a id="__codelineno-12-12" name="__codelineno-12-12" href="#__codelineno-12-12"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">idade</span><span class="p">)</span>
+</span><span id="__span-12-13"><a id="__codelineno-12-13" name="__codelineno-12-13" href="#__codelineno-12-13"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">ativo</span><span class="p">)</span>
+</span><span id="__span-12-14"><a id="__codelineno-12-14" name="__codelineno-12-14" href="#__codelineno-12-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="formatacao-de-saida-com-printf">Formatação de saída com <code>Printf</code><a class="headerlink" href="#formatacao-de-saida-com-printf" title="Permanent link">&para;</a></h2>
+<p>O <code>Printf</code> permite formatar a saída de dados.</p>
+<h3 id="principais-formatacoes">Principais formatações<a class="headerlink" href="#principais-formatacoes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Formato</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%s</code></td>
+<td>String</td>
+</tr>
+<tr>
+<td><code>%d</code></td>
+<td>Inteiro</td>
+</tr>
+<tr>
+<td><code>%f</code></td>
+<td>Decimal</td>
+</tr>
+<tr>
+<td><code>%t</code></td>
+<td>Booleano</td>
+</tr>
+</tbody>
+</table>
+<h3 id="exemplo_10">Exemplo<a class="headerlink" href="#exemplo_10" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>
+</span><span id="__span-13-7"><a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">    </span><span class="nx">nome</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;Ana&quot;</span>
+</span><span id="__span-13-8"><a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">    </span><span class="nx">idade</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">20</span>
+</span><span id="__span-13-9"><a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>
+</span><span id="__span-13-10"><a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Nome: %s\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nome</span><span class="p">)</span>
+</span><span id="__span-13-11"><a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Idade: %d\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">idade</span><span class="p">)</span>
+</span><span id="__span-13-12"><a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="convencoes-de-nomenclatura">Convenções de nomenclatura<a class="headerlink" href="#convencoes-de-nomenclatura" title="Permanent link">&para;</a></h2>
+<p>Go utiliza padrões simples e consistentes.</p>
+<table>
+<thead>
+<tr>
+<th>Convenção</th>
+<th>Exemplo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>camelCase</td>
+<td><code>nomeCompleto</code></td>
+</tr>
+<tr>
+<td>PascalCase</td>
+<td><code>NomeCompleto</code></td>
+</tr>
+<tr>
+<td>Nomes curtos e claros</td>
+<td><code>idade</code>, <code>usuario</code>, <code>email</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Dica de Ouro</p>
+<p>Em Go, nomes iniciados com letra maiúscula tornam-se públicos/exportáveis para outros pacotes.</p>
+</div>
+<hr />
+<h2 id="boas-praticas-com-variaveis">Boas práticas com variáveis<a class="headerlink" href="#boas-praticas-com-variaveis" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Boa prática</th>
+<th>Motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Utilizar nomes claros</td>
+<td>Facilita manutenção</td>
+</tr>
+<tr>
+<td>Evitar nomes genéricos</td>
+<td>Reduz ambiguidades</td>
+</tr>
+<tr>
+<td>Preferir inferência de tipos</td>
+<td>Código mais limpo</td>
+</tr>
+<tr>
+<td>Utilizar constantes quando possível</td>
+<td>Evita alterações acidentais</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="exemplo-completo">Exemplo completo<a class="headerlink" href="#exemplo-completo" title="Permanent link">&para;</a></h2>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">    </span><span class="c1">// Declaração de variáveis</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="nx">nome</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="s">&quot;João&quot;</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">    </span><span class="nx">idade</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">21</span>
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">    </span><span class="nx">altura</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mf">1.80</span>
+</span><span id="__span-14-11"><a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">    </span><span class="nx">estudante</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="kc">true</span>
+</span><span id="__span-14-12"><a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a>
+</span><span id="__span-14-13"><a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">    </span><span class="c1">// Constante</span>
+</span><span id="__span-14-14"><a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">universidade</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">&quot;Impacta&quot;</span>
+</span><span id="__span-14-15"><a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a>
+</span><span id="__span-14-16"><a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">    </span><span class="c1">// Exibição formatada</span>
+</span><span id="__span-14-17"><a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Nome: %s\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">nome</span><span class="p">)</span>
+</span><span id="__span-14-18"><a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Idade: %d\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">idade</span><span class="p">)</span>
+</span><span id="__span-14-19"><a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Altura: %.2f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">altura</span><span class="p">)</span>
+</span><span id="__span-14-20"><a id="__codelineno-14-20" name="__codelineno-14-20" href="#__codelineno-14-20"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Estudante: %t\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">estudante</span><span class="p">)</span>
+</span><span id="__span-14-21"><a id="__codelineno-14-21" name="__codelineno-14-21" href="#__codelineno-14-21"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Printf</span><span class="p">(</span><span class="s">&quot;Universidade: %s\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">universidade</span><span class="p">)</span>
+</span><span id="__span-14-22"><a id="__codelineno-14-22" name="__codelineno-14-22" href="#__codelineno-14-22"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">&para;</a></h2>
+<p>Agora que já entendemos a sintaxe básica e o funcionamento das variáveis, o próximo passo é estudar as estruturas de controle da linguagem Go.</p>
+<p>➡️ <a href="03-estruturas.html">Estruturas de Controle</a></p>
+<hr />
+<h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
+<p>Nesta página aprendemos:</p>
+<ul>
+<li>Estrutura básica de programas Go</li>
+<li>Comentários</li>
+<li>Declaração de variáveis</li>
+<li>Inferência de tipos</li>
+<li>Constantes</li>
+<li>Tipos primitivos</li>
+<li>Formatação de saída</li>
+<li>Convenções de nomenclatura</li>
+<li>Boas práticas</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Resumo Final</p>
+<p>A sintaxe simples do Go é um dos principais motivos da popularidade da linguagem. Dominar variáveis e tipos primitivos é essencial para construir aplicações robustas e profissionais.</p>
+</div>
 
 
 
@@ -627,6 +2087,44 @@ fmt.Println(&quot;Disponível:&quot;, emEstoque)
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="./01-intro.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 01 - Introdução e instalação">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                01 - Introdução e instalação
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="./03-estruturas.html" class="md-footer__link md-footer__link--next" aria-label="Next: 03 - Estruturas de Controle">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                03 - Estruturas de Controle
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

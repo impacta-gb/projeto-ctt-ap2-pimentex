@@ -48,16 +48,16 @@ Copyright &copy; 2026 The authors
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
     { "🏠 Projeto CTT-AP2" = "index.md" },
-    { "01 - Introdução e instalação" = "01 - intro.md" },
-    { "02 - Sintaxe e Variáveis" = "02 - sintaxe.md" },
-    { "03 - Estruturas de Controle" = "03 - estruturas.md" },
-    { "04 - Arrays, Slices e Maps" = "04 - colecoes.md" },
-    { "05 - Structs e Métodos" = "05 - structs.md" },
-    { "06 - Tratamento de Erros" = "06 - errors.md" },
-    { "07 - Goroutines" = "07 - goroutines.md" },
-    { "08 - Channels" = "08 - channels.md" },
-    { "09 - Go Modules" = "09 - gomodules.md" },
-    { "10 - Testes Automatizados" = "10 - testes.md" }
+    { "01 - Introdução e instalação" = "01-intro.md" },
+    { "02 - Sintaxe e Variáveis" = "02-sintaxe.md" },
+    { "03 - Estruturas de Controle" = "03-estruturas.md" },
+    { "04 - Arrays, Slices e Maps" = "04-colecoes.md" },
+    { "05 - Structs e Métodos" = "05-structs.md" },
+    { "06 - Tratamento de Erros" = "06-errors.md" },
+    { "07 - Goroutines" = "07-goroutines.md" },
+    { "08 - Channels" = "08-channels.md" },
+    { "09 - Go Modules" = "09-gomodules.md" },
+    { "10 - Testes Automatizados" = "10-testes.md" }
 ]
 
 [theme]
