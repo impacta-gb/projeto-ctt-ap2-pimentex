@@ -23,11 +23,11 @@
       
       
       <link rel="icon" href="./assets/images/favicon.png">
-      <meta name="generator" content="zensical-0.0.40">
+      <meta name="generator" content="zensical-0.0.41">
     
     
       
-        <title>10 - Testes Automatizados - Projeto CTT-AP2</title>
+        <title>Testes Automatizados em Go - Projeto CTT-AP2</title>
       
     
     
@@ -83,7 +83,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#10-testes-automatizados" class="md-skip">
+        <a href="#testes-automatizados-em-go" class="md-skip">
           Skip to content
         </a>
       
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              10 - Testes Automatizados
+              Testes Automatizados em Go
             
           </span>
         </div>
@@ -268,7 +268,7 @@
   
   
     <li class="md-nav__item">
-      <a href="./02%20-%20sintaxe.html" class="md-nav__link">
+      <a href="./02 - sintaxe.md" class="md-nav__link">
         
   
   
@@ -485,6 +485,23 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  10 - Testes Automatizados
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="10%20-%20testes.html" class="md-nav__link md-nav__link--active">
         
   
@@ -500,6 +517,332 @@
   
 
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao-aos-testes-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introdução aos Testes em Go
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-de-arquivos-de-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estrutura de Arquivos de Teste
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura de Arquivos de Teste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-estrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de Estrutura
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-o-primeiro-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Criando o Primeiro Teste
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando o Primeiro Teste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Arquivo Principal
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-de-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Arquivo de Teste
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executando-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executando Testes
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Executando Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executar-testes-do-diretorio-atual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executar testes do diretório atual
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-todos-os-testes-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executar todos os testes do projeto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-testes-com-detalhes-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executar testes com detalhes adicionais
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principais-comandos-de-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Principais Comandos de Teste
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cobertura-de-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cobertura de Testes
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cobertura de Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executando-analise-de-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executando análise de cobertura
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-saida" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de saída
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-com-multiplos-cenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Testes com Múltiplos Cenários
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes com Múltiplos Cenários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-teste-com-tabela" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de Teste com Tabela
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarks-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Benchmarks em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Benchmarks em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-benchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de Benchmark
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executando-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executando Benchmarks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boas-praticas-para-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Boas Práticas para Testes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracao-com-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Integração com CI/CD
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integração com CI&#x2f;CD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-simplificado-do-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fluxo Simplificado do Pipeline
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacao-com-outros-topicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Relação com Outros Tópicos
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Conclusão
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -522,6 +865,11 @@
                       
                     
                     
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
                   
                   <div class="md-sidebar__inner">
                     
@@ -533,6 +881,320 @@
   
     
   
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao-aos-testes-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Introdução aos Testes em Go
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-de-arquivos-de-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estrutura de Arquivos de Teste
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Estrutura de Arquivos de Teste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-estrutura" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de Estrutura
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-o-primeiro-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Criando o Primeiro Teste
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando o Primeiro Teste">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-principal" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Arquivo Principal
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquivo-de-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Arquivo de Teste
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executando-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executando Testes
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Executando Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executar-testes-do-diretorio-atual" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executar testes do diretório atual
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-todos-os-testes-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executar todos os testes do projeto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executar-testes-com-detalhes-adicionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executar testes com detalhes adicionais
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#principais-comandos-de-teste" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Principais Comandos de Teste
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cobertura-de-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Cobertura de Testes
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cobertura de Testes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#executando-analise-de-cobertura" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executando análise de cobertura
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-saida" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de saída
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testes-com-multiplos-cenarios" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Testes com Múltiplos Cenários
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testes com Múltiplos Cenários">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-teste-com-tabela" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de Teste com Tabela
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#benchmarks-em-go" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Benchmarks em Go
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Benchmarks em Go">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-benchmark" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de Benchmark
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#executando-benchmarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Executando Benchmarks
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#boas-praticas-para-testes" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Boas Práticas para Testes
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#integracao-com-cicd" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Integração com CI/CD
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Integração com CI&#x2f;CD">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#fluxo-simplificado-do-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Fluxo Simplificado do Pipeline
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#relacao-com-outros-topicos" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Relação com Outros Tópicos
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusao" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Conclusão
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -555,18 +1217,312 @@
                 
                   
 
-<h1 id="10-testes-automatizados">10 - Testes Automatizados<a class="headerlink" href="#10-testes-automatizados" title="Permanent link">&para;</a></h1>
-<p>Go possui suporte nativo para testes através do pacote <code>testing</code>.</p>
-<div class="admonition success">
-<p class="admonition-title">Comando de Teste</p>
-<p>Rode <code>go test</code> no terminal para executar todas as validações do seu projeto.</p>
+<h1 id="testes-automatizados-em-go">Testes Automatizados em Go<a class="headerlink" href="#testes-automatizados-em-go" title="Permanent link">&para;</a></h1>
+<h2 id="introducao-aos-testes-em-go">Introdução aos Testes em Go<a class="headerlink" href="#introducao-aos-testes-em-go" title="Permanent link">&para;</a></h2>
+<p>Os testes automatizados são uma das práticas mais importantes no desenvolvimento moderno de software. A linguagem Go possui suporte nativo para testes através do pacote <code>testing</code>, permitindo validar funcionalidades de forma simples, rápida e eficiente.</p>
+<p>Ao criar testes automatizados, conseguimos:</p>
+<ul>
+<li>Garantir que o código funciona corretamente</li>
+<li>Detectar erros rapidamente</li>
+<li>Facilitar manutenção futura</li>
+<li>Melhorar a confiabilidade da aplicação</li>
+<li>Integrar testes em pipelines de CI/CD</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Nota Importante</p>
+<p>Em Go, os testes fazem parte da própria linguagem e não exigem frameworks externos para funcionalidades básicas.</p>
 </div>
-<p>```go
-func TestSoma(t *testing.T) {
-    if Soma(2,2) != 4 {
-        t.Error("Falha no teste de soma")
-    }
-}</p>
+<hr />
+<h2 id="estrutura-de-arquivos-de-teste">Estrutura de Arquivos de Teste<a class="headerlink" href="#estrutura-de-arquivos-de-teste" title="Permanent link">&para;</a></h2>
+<p>Os testes em Go seguem uma convenção específica de nomenclatura.</p>
+<p>Todo arquivo de teste deve terminar com o sufixo <code>_test.go</code>.</p>
+<h3 id="exemplo-de-estrutura">Exemplo de Estrutura<a class="headerlink" href="#exemplo-de-estrutura" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>calculadora.go</code></td>
+<td>Código principal</td>
+</tr>
+<tr>
+<td><code>calculadora_test.go</code></td>
+<td>Arquivo contendo os testes</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="criando-o-primeiro-teste">Criando o Primeiro Teste<a class="headerlink" href="#criando-o-primeiro-teste" title="Permanent link">&para;</a></h2>
+<p>Vamos criar uma função simples de soma e validar seu comportamento utilizando testes automatizados.</p>
+<h3 id="arquivo-principal">Arquivo Principal<a class="headerlink" href="#arquivo-principal" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">calculadora</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">// Soma retorna a soma de dois números inteiros.</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Soma</span><span class="p">(</span><span class="nx">a</span><span class="w"> </span><span class="kt">int</span><span class="p">,</span><span class="w"> </span><span class="nx">b</span><span class="w"> </span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h3 id="arquivo-de-teste">Arquivo de Teste<a class="headerlink" href="#arquivo-de-teste" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">calculadora</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;testing&quot;</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="c1">// TestSoma verifica se a função Soma retorna o valor esperado.</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">TestSoma</span><span class="p">(</span><span class="nx">t</span><span class="w"> </span><span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nx">resultado</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Soma</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nx">esperado</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">5</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">esperado</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">        </span><span class="nx">t</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span><span class="s">&quot;Esperado %d, mas recebeu %d&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">esperado</span><span class="p">,</span><span class="w"> </span><span class="nx">resultado</span><span class="p">)</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="p">}</span>
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Dica de Ouro</p>
+<p>Os nomes das funções de teste devem começar obrigatoriamente com <code>Test</code> para que o Go consiga identificá-las automaticamente.</p>
+</div>
+<hr />
+<h2 id="executando-testes">Executando Testes<a class="headerlink" href="#executando-testes" title="Permanent link">&para;</a></h2>
+<p>O Go oferece comandos simples para execução dos testes diretamente pelo terminal.</p>
+<h3 id="executar-testes-do-diretorio-atual">Executar testes do diretório atual<a class="headerlink" href="#executar-testes-do-diretorio-atual" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>go<span class="w"> </span><span class="nb">test</span>
+</span></code></pre></div>
+<h3 id="executar-todos-os-testes-do-projeto">Executar todos os testes do projeto<a class="headerlink" href="#executar-todos-os-testes-do-projeto" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>go<span class="w"> </span><span class="nb">test</span><span class="w"> </span>./...
+</span></code></pre></div>
+<h3 id="executar-testes-com-detalhes-adicionais">Executar testes com detalhes adicionais<a class="headerlink" href="#executar-testes-com-detalhes-adicionais" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>go<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-v
+</span></code></pre></div>
+<hr />
+<h2 id="principais-comandos-de-teste">Principais Comandos de Teste<a class="headerlink" href="#principais-comandos-de-teste" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Comando</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>go test</code></td>
+<td>Executa testes do diretório atual</td>
+</tr>
+<tr>
+<td><code>go test ./...</code></td>
+<td>Executa todos os testes do projeto</td>
+</tr>
+<tr>
+<td><code>go test -v</code></td>
+<td>Mostra saída detalhada</td>
+</tr>
+<tr>
+<td><code>go test -cover</code></td>
+<td>Exibe cobertura de testes</td>
+</tr>
+<tr>
+<td><code>go test -run TestNome</code></td>
+<td>Executa um teste específico</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="cobertura-de-testes">Cobertura de Testes<a class="headerlink" href="#cobertura-de-testes" title="Permanent link">&para;</a></h2>
+<p>A cobertura de testes mede quanto do código foi executado durante os testes automatizados.</p>
+<h3 id="executando-analise-de-cobertura">Executando análise de cobertura<a class="headerlink" href="#executando-analise-de-cobertura" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>go<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-cover
+</span></code></pre></div>
+<h3 id="exemplo-de-saida">Exemplo de saída<a class="headerlink" href="#exemplo-de-saida" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>coverage: 85.7% of statements
+</span></code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Cuidado</p>
+<p>Alta cobertura de testes não garante ausência de bugs. O mais importante é testar cenários relevantes e críticos da aplicação.</p>
+</div>
+<hr />
+<h2 id="testes-com-multiplos-cenarios">Testes com Múltiplos Cenários<a class="headerlink" href="#testes-com-multiplos-cenarios" title="Permanent link">&para;</a></h2>
+<p>Uma prática muito comum em Go é utilizar testes baseados em tabelas (Table Driven Tests).</p>
+<p>Essa abordagem facilita manutenção e reduz repetição de código.</p>
+<h3 id="exemplo-de-teste-com-tabela">Exemplo de Teste com Tabela<a class="headerlink" href="#exemplo-de-teste-com-tabela" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">calculadora</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;testing&quot;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="c1">// TestSomaTabela executa múltiplos cenários de teste.</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">TestSomaTabela</span><span class="p">(</span><span class="nx">t</span><span class="w"> </span><span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">T</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nx">testes</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="p">[]</span><span class="kd">struct</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">        </span><span class="nx">nome</span><span class="w">      </span><span class="kt">string</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">        </span><span class="nx">a</span><span class="w">         </span><span class="kt">int</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">        </span><span class="nx">b</span><span class="w">         </span><span class="kt">int</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="nx">esperado</span><span class="w">  </span><span class="kt">int</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">    </span><span class="p">}{</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">            </span><span class="nx">nome</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Soma positiva&quot;</span><span class="p">,</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">            </span><span class="nx">a</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">            </span><span class="nx">b</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+</span><span id="__span-7-18"><a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">            </span><span class="nx">esperado</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-7-19"><a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-7-20"><a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-7-21"><a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">            </span><span class="nx">nome</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Soma com negativo&quot;</span><span class="p">,</span>
+</span><span id="__span-7-22"><a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">            </span><span class="nx">a</span><span class="p">:</span><span class="w"> </span><span class="o">-</span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-7-23"><a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">            </span><span class="nx">b</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-7-24"><a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">            </span><span class="nx">esperado</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-7-25"><a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-7-26"><a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">        </span><span class="p">{</span>
+</span><span id="__span-7-27"><a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">            </span><span class="nx">nome</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Soma com zero&quot;</span><span class="p">,</span>
+</span><span id="__span-7-28"><a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">            </span><span class="nx">a</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+</span><span id="__span-7-29"><a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">            </span><span class="nx">b</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-7-30"><a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">            </span><span class="nx">esperado</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+</span><span id="__span-7-31"><a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-7-32"><a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-33"><a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a>
+</span><span id="__span-7-34"><a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">_</span><span class="p">,</span><span class="w"> </span><span class="nx">teste</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="k">range</span><span class="w"> </span><span class="nx">testes</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-35"><a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a>
+</span><span id="__span-7-36"><a id="__codelineno-7-36" name="__codelineno-7-36" href="#__codelineno-7-36"></a><span class="w">        </span><span class="nx">resultado</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">Soma</span><span class="p">(</span><span class="nx">teste</span><span class="p">.</span><span class="nx">a</span><span class="p">,</span><span class="w"> </span><span class="nx">teste</span><span class="p">.</span><span class="nx">b</span><span class="p">)</span>
+</span><span id="__span-7-37"><a id="__codelineno-7-37" name="__codelineno-7-37" href="#__codelineno-7-37"></a>
+</span><span id="__span-7-38"><a id="__codelineno-7-38" name="__codelineno-7-38" href="#__codelineno-7-38"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="nx">resultado</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="nx">teste</span><span class="p">.</span><span class="nx">esperado</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-39"><a id="__codelineno-7-39" name="__codelineno-7-39" href="#__codelineno-7-39"></a><span class="w">            </span><span class="nx">t</span><span class="p">.</span><span class="nx">Errorf</span><span class="p">(</span>
+</span><span id="__span-7-40"><a id="__codelineno-7-40" name="__codelineno-7-40" href="#__codelineno-7-40"></a><span class="w">                </span><span class="s">&quot;%s: esperado %d, recebeu %d&quot;</span><span class="p">,</span>
+</span><span id="__span-7-41"><a id="__codelineno-7-41" name="__codelineno-7-41" href="#__codelineno-7-41"></a><span class="w">                </span><span class="nx">teste</span><span class="p">.</span><span class="nx">nome</span><span class="p">,</span>
+</span><span id="__span-7-42"><a id="__codelineno-7-42" name="__codelineno-7-42" href="#__codelineno-7-42"></a><span class="w">                </span><span class="nx">teste</span><span class="p">.</span><span class="nx">esperado</span><span class="p">,</span>
+</span><span id="__span-7-43"><a id="__codelineno-7-43" name="__codelineno-7-43" href="#__codelineno-7-43"></a><span class="w">                </span><span class="nx">resultado</span><span class="p">,</span>
+</span><span id="__span-7-44"><a id="__codelineno-7-44" name="__codelineno-7-44" href="#__codelineno-7-44"></a><span class="w">            </span><span class="p">)</span>
+</span><span id="__span-7-45"><a id="__codelineno-7-45" name="__codelineno-7-45" href="#__codelineno-7-45"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-7-46"><a id="__codelineno-7-46" name="__codelineno-7-46" href="#__codelineno-7-46"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-7-47"><a id="__codelineno-7-47" name="__codelineno-7-47" href="#__codelineno-7-47"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="benchmarks-em-go">Benchmarks em Go<a class="headerlink" href="#benchmarks-em-go" title="Permanent link">&para;</a></h2>
+<p>Benchmarks são utilizados para medir desempenho e eficiência do código.</p>
+<p>As funções de benchmark devem começar com <code>Benchmark</code>.</p>
+<h3 id="exemplo-de-benchmark">Exemplo de Benchmark<a class="headerlink" href="#exemplo-de-benchmark" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">calculadora</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;testing&quot;</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="c1">// BenchmarkSoma mede desempenho da função Soma.</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="kd">func</span><span class="w"> </span><span class="nx">BenchmarkSoma</span><span class="p">(</span><span class="nx">b</span><span class="w"> </span><span class="o">*</span><span class="nx">testing</span><span class="p">.</span><span class="nx">B</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="nx">b</span><span class="p">.</span><span class="nx">N</span><span class="p">;</span><span class="w"> </span><span class="nx">i</span><span class="o">++</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">        </span><span class="nx">Soma</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">)</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<h3 id="executando-benchmarks">Executando Benchmarks<a class="headerlink" href="#executando-benchmarks" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>go<span class="w"> </span><span class="nb">test</span><span class="w"> </span>-bench<span class="o">=</span>.
+</span></code></pre></div>
+<hr />
+<h2 id="boas-praticas-para-testes">Boas Práticas para Testes<a class="headerlink" href="#boas-praticas-para-testes" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Boa Prática</th>
+<th>Benefício</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Criar testes pequenos</td>
+<td>Facilita manutenção</td>
+</tr>
+<tr>
+<td>Testar cenários de erro</td>
+<td>Aumenta confiabilidade</td>
+</tr>
+<tr>
+<td>Usar nomes descritivos</td>
+<td>Melhora legibilidade</td>
+</tr>
+<tr>
+<td>Automatizar execução</td>
+<td>Integra facilmente com CI/CD</td>
+</tr>
+<tr>
+<td>Evitar dependência entre testes</td>
+<td>Reduz falhas inesperadas</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition tip">
+<p class="admonition-title">Dica de Ouro</p>
+<p>Testes devem ser rápidos, independentes e previsíveis. Um teste lento ou instável reduz a confiança no projeto.</p>
+</div>
+<hr />
+<h2 id="integracao-com-cicd">Integração com CI/CD<a class="headerlink" href="#integracao-com-cicd" title="Permanent link">&para;</a></h2>
+<p>Os testes automatizados são essenciais em pipelines de Integração Contínua (CI).</p>
+<p>No projeto CTT-AP2, os testes e validações são executados automaticamente através do GitHub Actions durante:</p>
+<ul>
+<li>Pull Requests</li>
+<li>Pushes na branch <code>main</code></li>
+<li>Execuções agendadas (<code>schedule</code>)</li>
+</ul>
+<p>Esse processo garante que alterações sejam verificadas antes da publicação do site.</p>
+<h3 id="fluxo-simplificado-do-pipeline">Fluxo Simplificado do Pipeline<a class="headerlink" href="#fluxo-simplificado-do-pipeline" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Evento</th>
+<th>Ação Executada</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Pull Request</td>
+<td>Validação do projeto</td>
+</tr>
+<tr>
+<td>Push na <code>main</code></td>
+<td>Build e deploy</td>
+</tr>
+<tr>
+<td>Schedule</td>
+<td>Execução automática semanal</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Nota Importante</p>
+<p>A automação de testes é uma das principais práticas utilizadas em ambientes DevOps e pipelines modernos de CI/CD.</p>
+</div>
+<hr />
+<h2 id="relacao-com-outros-topicos">Relação com Outros Tópicos<a class="headerlink" href="#relacao-com-outros-topicos" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Tema</th>
+<th>Link</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tratamento de Erros</td>
+<td><a href="06-erros.html">06-erros.md</a></td>
+</tr>
+<tr>
+<td>Goroutines</td>
+<td><a href="07-goroutines.html">07-goroutines.md</a></td>
+</tr>
+<tr>
+<td>Channels</td>
+<td><a href="08-channels.html">08-channels.md</a></td>
+</tr>
+<tr>
+<td>Go Modules</td>
+<td><a href="09-gomodules.html">09-gomodules.md</a></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conclusao">Conclusão<a class="headerlink" href="#conclusao" title="Permanent link">&para;</a></h2>
+<p>Os testes automatizados são fundamentais para garantir qualidade, estabilidade e segurança em aplicações Go.</p>
+<p>A simplicidade do pacote <code>testing</code>, combinada com a velocidade da linguagem Go, torna o processo de criação e execução de testes extremamente eficiente.</p>
+<p>Além disso, a integração natural com pipelines de CI/CD facilita automação, validação contínua e entrega segura de software em ambientes profissionais.s</p>
 
 
 
