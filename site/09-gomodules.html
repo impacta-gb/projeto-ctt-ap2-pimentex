@@ -1,0 +1,1403 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="A new project generated from the default template project.">
+      
+      
+        <meta name="author" content="<your name here>">
+      
+      
+        <link rel="canonical" href="https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/09-gomodules.html">
+      
+      
+        <link rel="prev" href="./08-channels.html">
+      
+      
+        <link rel="next" href="./10-testes.html">
+      
+      
+        
+      
+      
+      <link rel="icon" href="./assets/images/favicon.png">
+      <meta name="generator" content="zensical-0.0.41">
+    
+    
+      
+        <title>Go Modules - Projeto CTT-AP2</title>
+      
+    
+    
+      
+        
+      
+      <link rel="stylesheet" href="./assets/stylesheets/modern/main.fba56155.min.css">
+      
+        
+          
+        
+        <link rel="stylesheet" href="./assets/stylesheets/modern/palette.dfe2e883.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,300i,400,400i,500,500i,700,700i%7CJetBrains+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Inter";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_scope.pathname.endsWith("/")||(__md_scope=new URL(__md_scope.pathname+"/",location)),__md_hash=e=>[...e].reduce(((e,t)=>(e<<5)-e+t.charCodeAt(0)),0),__md_get=(e,t=localStorage,_=__md_scope)=>JSON.parse(t.getItem(_.pathname+"."+e)),__md_set=(e,t,_=localStorage,a=__md_scope)=>{try{_.setItem(a.pathname+"."+e,JSON.stringify(t))}catch(e){}},document.documentElement.setAttribute("data-platform",navigator.platform)</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer" aria-label="Navigation"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#go-modules" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="./index.html" title="Projeto CTT-AP2" class="md-header__button md-logo" aria-label="Projeto CTT-AP2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer" aria-label="Navigation">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-menu" viewBox="0 0 24 24"><path d="M4 5h16M4 12h16M4 19h16"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Projeto CTT-AP2
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Go Modules
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="none" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-moon" viewBox="0 0 24 24"><path d="M20.985 12.486a9 9 0 1 1-9.473-9.472c.405-.022.617.46.402.803a6 6 0 0 0 8.268 8.268c.344-.215.825-.004.803.401"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search" aria-label="Search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-search" viewBox="0 0 24 24"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog" aria-label="Search">
+  <button type="button" class="md-search__button">
+    Search
+  </button>
+</div>
+      
+    
+    <div class="md-header__source">
+      
+    </div>
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="./index.html" title="Projeto CTT-AP2" class="md-nav__button md-logo" aria-label="Projeto CTT-AP2" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-book-open" viewBox="0 0 24 24"><path d="M12 7v14M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>
+
+    </a>
+    Projeto CTT-AP2
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./index.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  🏠 Projeto CTT-AP2
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./01-intro.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  01 - Introdução e instalação
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./02-sintaxe.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  02 - Sintaxe e Variáveis
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./03-estruturas.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  03 - Estruturas de Controle
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./04-colecoes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  04 - Arrays, Slices e Maps
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./05-structs.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  05 - Structs e Métodos
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./06-errors.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  06 - Tratamento de Erros
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./07-goroutines.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  07 - Goroutines
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./08-channels.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  08 - Channels
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  09 - Go Modules
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="09-gomodules.html" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  09 - Go Modules
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-um-go-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        O que é um Go Module?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-um-projeto-com-go-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Criando um projeto com Go Modules
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando um projeto com Go Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-1-criar-a-pasta-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passo 1 — Criar a pasta do projeto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-2-entrar-na-pasta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passo 2 — Entrar na pasta
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-3-inicializar-o-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passo 3 — Inicializar o módulo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estrutura do projeto
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entendendo-o-arquivo-gomod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Entendendo o arquivo <code>go.mod</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entendendo o arquivo go.mod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicando-cada-linha" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Explicando cada linha
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-o-primeiro-arquivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Criando o primeiro arquivo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando o primeiro arquivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-maingo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de <code>main.go</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="./10-testes.html" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+  10 - Testes Automatizados
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  
+                    
+                    
+                    
+                      
+                    
+                    
+                      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+                      <div class="md-sidebar-button__wrapper">
+                        <label class="md-sidebar-button" for="__toc"></label>
+                      </div>
+                    
+                  
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--secondary" aria-label="On this page">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      On this page
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#o-que-e-um-go-module" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        O que é um Go Module?
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-um-projeto-com-go-modules" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Criando um projeto com Go Modules
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando um projeto com Go Modules">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passo-1-criar-a-pasta-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passo 1 — Criar a pasta do projeto
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-2-entrar-na-pasta" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passo 2 — Entrar na pasta
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-3-inicializar-o-modulo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Passo 3 — Inicializar o módulo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#estrutura-do-projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Estrutura do projeto
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#entendendo-o-arquivo-gomod" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Entendendo o arquivo <code>go.mod</code>
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Entendendo o arquivo go.mod">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explicando-cada-linha" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Explicando cada linha
+      </span>
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#criando-o-primeiro-arquivo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Criando o primeiro arquivo
+      </span>
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Criando o primeiro arquivo">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-maingo" class="md-nav__link">
+    <span class="md-ellipsis">
+      <span class="md-typeset">
+        Exemplo de <code>main.go</code>
+      </span>
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+                
+
+
+
+  
+
+
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+<h1 id="go-modules">Go Modules<a class="headerlink" href="#go-modules" title="Permanent link">&para;</a></h1>
+<p>O sistema de gerenciamento de dependências do Go é chamado de <strong>Go Modules</strong>.</p>
+<p>Ele permite organizar projetos, instalar bibliotecas externas e controlar versões de dependências de forma simples e eficiente.</p>
+<p>Antes do Go Modules, o gerenciamento de pacotes em Go era muito mais complexo e dependia do <code>GOPATH</code>.</p>
+<p>Atualmente, Go Modules é o padrão oficial da linguagem.</p>
+<hr />
+<h2 id="o-que-e-um-go-module">O que é um Go Module?<a class="headerlink" href="#o-que-e-um-go-module" title="Permanent link">&para;</a></h2>
+<p>Um Go Module é um projeto Go com gerenciamento próprio de dependências.</p>
+<p>Todo módulo possui um arquivo chamado:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>go.mod
+</span></code></pre></div>
+<p>Esse arquivo contém:</p>
+<ul>
+<li>Nome do projeto</li>
+<li>Versão do Go</li>
+<li>Dependências instaladas</li>
+</ul>
+<hr />
+<h2 id="criando-um-projeto-com-go-modules">Criando um projeto com Go Modules<a class="headerlink" href="#criando-um-projeto-com-go-modules" title="Permanent link">&para;</a></h2>
+<h3 id="passo-1-criar-a-pasta-do-projeto">Passo 1 — Criar a pasta do projeto<a class="headerlink" href="#passo-1-criar-a-pasta-do-projeto" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>mkdir<span class="w"> </span>api-go
+</span></code></pre></div>
+<hr />
+<h3 id="passo-2-entrar-na-pasta">Passo 2 — Entrar na pasta<a class="headerlink" href="#passo-2-entrar-na-pasta" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">cd</span><span class="w"> </span>api-go
+</span></code></pre></div>
+<hr />
+<h3 id="passo-3-inicializar-o-modulo">Passo 3 — Inicializar o módulo<a class="headerlink" href="#passo-3-inicializar-o-modulo" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>go<span class="w"> </span>mod<span class="w"> </span>init<span class="w"> </span>api-go
+</span></code></pre></div>
+<p>Resultado:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>go: creating new go.mod: module api-go
+</span></code></pre></div>
+<hr />
+<h2 id="estrutura-do-projeto">Estrutura do projeto<a class="headerlink" href="#estrutura-do-projeto" title="Permanent link">&para;</a></h2>
+<p>Após executar o comando, o projeto ficará assim:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>api-go/
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>├── go.mod
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>└── main.go
+</span></code></pre></div>
+<hr />
+<h2 id="entendendo-o-arquivo-gomod">Entendendo o arquivo <code>go.mod</code><a class="headerlink" href="#entendendo-o-arquivo-gomod" title="Permanent link">&para;</a></h2>
+<h3 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nx">module</span><span class="w"> </span><span class="nx">api</span><span class="o">-</span><span class="k">go</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">go</span><span class="w"> </span><span class="mf">1.24</span>
+</span></code></pre></div>
+<hr />
+<h2 id="explicando-cada-linha">Explicando cada linha<a class="headerlink" href="#explicando-cada-linha" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Linha</th>
+<th>Função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>module api-go</code></td>
+<td>Nome do módulo</td>
+</tr>
+<tr>
+<td><code>go 1.24</code></td>
+<td>Versão do Go utilizada</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="criando-o-primeiro-arquivo">Criando o primeiro arquivo<a class="headerlink" href="#criando-o-primeiro-arquivo" title="Permanent link">&para;</a></h2>
+<h3 id="exemplo-de-maingo">Exemplo de <code>main.go</code><a class="headerlink" href="#exemplo-de-maingo" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Projeto com Go Modules&quot;</span><span class="p">)</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h1 id="instalando-dependencias">Instalando dependências<a class="headerlink" href="#instalando-dependencias" title="Permanent link">&para;</a></h1>
+<p>Go Modules permite instalar bibliotecas externas facilmente.</p>
+<hr />
+<h2 id="exemplo-com-biblioteca-externa">Exemplo com biblioteca externa<a class="headerlink" href="#exemplo-com-biblioteca-externa" title="Permanent link">&para;</a></h2>
+<p>Vamos instalar o framework HTTP <code>Gin</code>.</p>
+<h3 id="comando">Comando<a class="headerlink" href="#comando" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>go<span class="w"> </span>get<span class="w"> </span>github.com/gin-gonic/gin
+</span></code></pre></div>
+<hr />
+<h2 id="resultado-no-gomod">Resultado no <code>go.mod</code><a class="headerlink" href="#resultado-no-gomod" title="Permanent link">&para;</a></h2>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nx">module</span><span class="w"> </span><span class="nx">api</span><span class="o">-</span><span class="k">go</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="k">go</span><span class="w"> </span><span class="mf">1.24</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="nx">require</span><span class="w"> </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">gin</span><span class="o">-</span><span class="nx">gonic</span><span class="o">/</span><span class="nx">gin</span><span class="w"> </span><span class="nx">v1</span><span class="mf">.10.0</span>
+</span></code></pre></div>
+<hr />
+<h2 id="utilizando-a-dependencia">Utilizando a dependência<a class="headerlink" href="#utilizando-a-dependencia" title="Permanent link">&para;</a></h2>
+<h3 id="exemplo_1">Exemplo<a class="headerlink" href="#exemplo_1" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;github.com/gin-gonic/gin&quot;</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-6"><a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>
+</span><span id="__span-10-7"><a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">    </span><span class="nx">router</span><span class="w"> </span><span class="o">:=</span><span class="w"> </span><span class="nx">gin</span><span class="p">.</span><span class="nx">Default</span><span class="p">()</span>
+</span><span id="__span-10-8"><a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a>
+</span><span id="__span-10-9"><a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">    </span><span class="nx">router</span><span class="p">.</span><span class="nx">GET</span><span class="p">(</span><span class="s">&quot;/&quot;</span><span class="p">,</span><span class="w"> </span><span class="kd">func</span><span class="p">(</span><span class="nx">c</span><span class="w"> </span><span class="o">*</span><span class="nx">gin</span><span class="p">.</span><span class="nx">Context</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-10"><a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a>
+</span><span id="__span-10-11"><a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">        </span><span class="nx">c</span><span class="p">.</span><span class="nx">JSON</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="nx">gin</span><span class="p">.</span><span class="nx">H</span><span class="p">{</span>
+</span><span id="__span-10-12"><a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">            </span><span class="s">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;API funcionando&quot;</span><span class="p">,</span>
+</span><span id="__span-10-13"><a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">        </span><span class="p">})</span>
+</span><span id="__span-10-14"><a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">    </span><span class="p">})</span>
+</span><span id="__span-10-15"><a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a>
+</span><span id="__span-10-16"><a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="nx">router</span><span class="p">.</span><span class="nx">Run</span><span class="p">()</span>
+</span><span id="__span-10-17"><a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="arquivo-gosum">Arquivo <code>go.sum</code><a class="headerlink" href="#arquivo-gosum" title="Permanent link">&para;</a></h2>
+<p>Além do <code>go.mod</code>, Go cria automaticamente:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>go.sum
+</span></code></pre></div>
+<p>Esse arquivo armazena hashes de segurança das dependências instaladas.</p>
+<hr />
+<h2 id="diferenca-entre-gomod-e-gosum">Diferença entre <code>go.mod</code> e <code>go.sum</code><a class="headerlink" href="#diferenca-entre-gomod-e-gosum" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Arquivo</th>
+<th>Função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>go.mod</code></td>
+<td>Lista dependências</td>
+</tr>
+<tr>
+<td><code>go.sum</code></td>
+<td>Valida integridade</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Nota Importante</p>
+<p>Nunca remova o arquivo <code>go.sum</code>. Ele é essencial para segurança e consistência do projeto.</p>
+</div>
+<hr />
+<h1 id="principais-comandos-do-go-modules">Principais comandos do Go Modules<a class="headerlink" href="#principais-comandos-do-go-modules" title="Permanent link">&para;</a></h1>
+<h2 id="go-mod-init"><code>go mod init</code><a class="headerlink" href="#go-mod-init" title="Permanent link">&para;</a></h2>
+<p>Inicializa um módulo.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>go<span class="w"> </span>mod<span class="w"> </span>init<span class="w"> </span>nome-projeto
+</span></code></pre></div>
+<hr />
+<h2 id="go-get"><code>go get</code><a class="headerlink" href="#go-get" title="Permanent link">&para;</a></h2>
+<p>Instala dependências.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>go<span class="w"> </span>get<span class="w"> </span>github.com/gin-gonic/gin
+</span></code></pre></div>
+<hr />
+<h2 id="go-mod-tidy"><code>go mod tidy</code><a class="headerlink" href="#go-mod-tidy" title="Permanent link">&para;</a></h2>
+<p>Remove dependências não utilizadas e organiza o projeto.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>go<span class="w"> </span>mod<span class="w"> </span>tidy
+</span></code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Dica de Ouro</p>
+<p>Execute <code>go mod tidy</code> frequentemente para manter o projeto limpo e organizado.</p>
+</div>
+<hr />
+<h2 id="go-mod-download"><code>go mod download</code><a class="headerlink" href="#go-mod-download" title="Permanent link">&para;</a></h2>
+<p>Baixa dependências manualmente.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>go<span class="w"> </span>mod<span class="w"> </span>download
+</span></code></pre></div>
+<hr />
+<h2 id="go-list-m-all"><code>go list -m all</code><a class="headerlink" href="#go-list-m-all" title="Permanent link">&para;</a></h2>
+<p>Lista todos os módulos instalados.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>go<span class="w"> </span>list<span class="w"> </span>-m<span class="w"> </span>all
+</span></code></pre></div>
+<hr />
+<h1 id="versionamento-de-dependencias">Versionamento de dependências<a class="headerlink" href="#versionamento-de-dependencias" title="Permanent link">&para;</a></h1>
+<p>Go Modules suporta versionamento semântico.</p>
+<h3 id="exemplo_2">Exemplo<a class="headerlink" href="#exemplo_2" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>v1.2.0
+</span></code></pre></div>
+<hr />
+<h2 id="estrutura-do-versionamento">Estrutura do versionamento<a class="headerlink" href="#estrutura-do-versionamento" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Parte</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>v1</code></td>
+<td>Versão principal</td>
+</tr>
+<tr>
+<td><code>2</code></td>
+<td>Novas funcionalidades</td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td>Correções</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="atualizando-dependencias">Atualizando dependências<a class="headerlink" href="#atualizando-dependencias" title="Permanent link">&para;</a></h2>
+<h3 id="exemplo_3">Exemplo<a class="headerlink" href="#exemplo_3" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>go<span class="w"> </span>get<span class="w"> </span>-u
+</span></code></pre></div>
+<hr />
+<h2 id="atualizando-dependencia-especifica">Atualizando dependência específica<a class="headerlink" href="#atualizando-dependencia-especifica" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>go<span class="w"> </span>get<span class="w"> </span>github.com/gin-gonic/gin@latest
+</span></code></pre></div>
+<hr />
+<h1 id="dependencias-diretas-e-indiretas">Dependências diretas e indiretas<a class="headerlink" href="#dependencias-diretas-e-indiretas" title="Permanent link">&para;</a></h1>
+<p>Go diferencia dependências utilizadas diretamente e dependências internas de bibliotecas.</p>
+<h3 id="exemplo_4">Exemplo<a class="headerlink" href="#exemplo_4" title="Permanent link">&para;</a></h3>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nx">require</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">    </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">gin</span><span class="o">-</span><span class="nx">gonic</span><span class="o">/</span><span class="nx">gin</span><span class="w"> </span><span class="nx">v1</span><span class="mf">.10.0</span>
+</span><span id="__span-20-3"><a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="p">)</span>
+</span><span id="__span-20-4"><a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a>
+</span><span id="__span-20-5"><a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="nx">require</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-20-6"><a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">    </span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="k">go</span><span class="o">-</span><span class="nx">playground</span><span class="o">/</span><span class="nx">validator</span><span class="o">/</span><span class="nx">v10</span><span class="w"> </span><span class="nx">v10</span><span class="mf">.20.0</span><span class="w"> </span><span class="c1">// indirect</span>
+</span><span id="__span-20-7"><a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="p">)</span>
+</span></code></pre></div>
+<hr />
+<h2 id="dependencia-indireta">Dependência indireta<a class="headerlink" href="#dependencia-indireta" title="Permanent link">&para;</a></h2>
+<p>Dependências indiretas são bibliotecas utilizadas por outras bibliotecas.</p>
+<hr />
+<h1 id="trabalhando-com-multiplos-arquivos">Trabalhando com múltiplos arquivos<a class="headerlink" href="#trabalhando-com-multiplos-arquivos" title="Permanent link">&para;</a></h1>
+<p>Em projetos maiores, normalmente utilizamos múltiplos pacotes.</p>
+<hr />
+<h2 id="exemplo-de-estrutura-profissional">Exemplo de estrutura profissional<a class="headerlink" href="#exemplo-de-estrutura-profissional" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-21-1"><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>api-go/
+</span><span id="__span-21-2"><a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>├── go.mod
+</span><span id="__span-21-3"><a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a>├── go.sum
+</span><span id="__span-21-4"><a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a>├── main.go
+</span><span id="__span-21-5"><a id="__codelineno-21-5" name="__codelineno-21-5" href="#__codelineno-21-5"></a>├── handlers/
+</span><span id="__span-21-6"><a id="__codelineno-21-6" name="__codelineno-21-6" href="#__codelineno-21-6"></a>├── services/
+</span><span id="__span-21-7"><a id="__codelineno-21-7" name="__codelineno-21-7" href="#__codelineno-21-7"></a>├── repositories/
+</span><span id="__span-21-8"><a id="__codelineno-21-8" name="__codelineno-21-8" href="#__codelineno-21-8"></a>└── models/
+</span></code></pre></div>
+<hr />
+<h1 id="importando-pacotes-internos">Importando pacotes internos<a class="headerlink" href="#importando-pacotes-internos" title="Permanent link">&para;</a></h1>
+<h3 id="estrutura">Estrutura<a class="headerlink" href="#estrutura" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-22-1"><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>api-go/
+</span><span id="__span-22-2"><a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>├── go.mod
+</span><span id="__span-22-3"><a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>├── main.go
+</span><span id="__span-22-4"><a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a>└── utils/
+</span><span id="__span-22-5"><a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a>    └── mensagem.go
+</span></code></pre></div>
+<hr />
+<h2 id="arquivo-mensagemgo">Arquivo <code>mensagem.go</code><a class="headerlink" href="#arquivo-mensagemgo" title="Permanent link">&para;</a></h2>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-23-1"><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">utils</span>
+</span><span id="__span-23-2"><a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a>
+</span><span id="__span-23-3"><a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="kd">func</span><span class="w"> </span><span class="nx">Mensagem</span><span class="p">()</span><span class="w"> </span><span class="kt">string</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-23-4"><a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a>
+</span><span id="__span-23-5"><a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="s">&quot;Olá do pacote utils&quot;</span>
+</span><span id="__span-23-6"><a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="arquivo-maingo">Arquivo <code>main.go</code><a class="headerlink" href="#arquivo-maingo" title="Permanent link">&para;</a></h2>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-24-1"><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-24-2"><a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
+</span><span id="__span-24-3"><a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="kn">import</span><span class="w"> </span><span class="p">(</span>
+</span><span id="__span-24-4"><a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a><span class="w">    </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-24-5"><a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="w">    </span><span class="s">&quot;api-go/utils&quot;</span>
+</span><span id="__span-24-6"><a id="__codelineno-24-6" name="__codelineno-24-6" href="#__codelineno-24-6"></a><span class="p">)</span>
+</span><span id="__span-24-7"><a id="__codelineno-24-7" name="__codelineno-24-7" href="#__codelineno-24-7"></a>
+</span><span id="__span-24-8"><a id="__codelineno-24-8" name="__codelineno-24-8" href="#__codelineno-24-8"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-24-9"><a id="__codelineno-24-9" name="__codelineno-24-9" href="#__codelineno-24-9"></a>
+</span><span id="__span-24-10"><a id="__codelineno-24-10" name="__codelineno-24-10" href="#__codelineno-24-10"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="nx">utils</span><span class="p">.</span><span class="nx">Mensagem</span><span class="p">())</span>
+</span><span id="__span-24-11"><a id="__codelineno-24-11" name="__codelineno-24-11" href="#__codelineno-24-11"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h1 id="proxy-de-modulos-do-go">Proxy de módulos do Go<a class="headerlink" href="#proxy-de-modulos-do-go" title="Permanent link">&para;</a></h1>
+<p>O Go utiliza servidores proxy para acelerar downloads e melhorar segurança.</p>
+<hr />
+<h2 id="proxy-padrao">Proxy padrão<a class="headerlink" href="#proxy-padrao" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-25-1"><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>https://proxy.golang.org
+</span></code></pre></div>
+<hr />
+<h1 id="variavel-goproxy">Variável <code>GOPROXY</code><a class="headerlink" href="#variavel-goproxy" title="Permanent link">&para;</a></h1>
+<p>Podemos configurar proxies personalizados.</p>
+<h3 id="exemplo_5">Exemplo<a class="headerlink" href="#exemplo_5" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-26-1"><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">GOPROXY</span><span class="o">=</span>https://proxy.golang.org
+</span></code></pre></div>
+<hr />
+<h1 id="vendoring">Vendoring<a class="headerlink" href="#vendoring" title="Permanent link">&para;</a></h1>
+<p>Go permite armazenar dependências localmente no projeto.</p>
+<hr />
+<h2 id="criando-pasta-vendor">Criando pasta vendor<a class="headerlink" href="#criando-pasta-vendor" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-27-1"><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>go<span class="w"> </span>mod<span class="w"> </span>vendor
+</span></code></pre></div>
+<p>Resultado:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-28-1"><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>vendor/
+</span></code></pre></div>
+<hr />
+<h2 id="quando-utilizar-vendor">Quando utilizar Vendor?<a class="headerlink" href="#quando-utilizar-vendor" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Cenário</th>
+<th>Recomendado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Ambientes offline</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Empresas com políticas restritas</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Projetos simples</td>
+<td>❌</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="boas-praticas-com-go-modules">Boas práticas com Go Modules<a class="headerlink" href="#boas-praticas-com-go-modules" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Boa prática</th>
+<th>Motivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Utilizar <code>go mod tidy</code></td>
+<td>Projeto limpo</td>
+</tr>
+<tr>
+<td>Versionar <code>go.mod</code> e <code>go.sum</code></td>
+<td>Reprodutibilidade</td>
+</tr>
+<tr>
+<td>Evitar dependências desnecessárias</td>
+<td>Melhor performance</td>
+</tr>
+<tr>
+<td>Organizar pacotes corretamente</td>
+<td>Melhor arquitetura</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition warning">
+<p class="admonition-title">Cuidado</p>
+<p>Instalar muitas dependências externas pode aumentar complexidade, vulnerabilidades e tamanho do projeto.</p>
+</div>
+<hr />
+<h1 id="exemplo-completo">Exemplo completo<a class="headerlink" href="#exemplo-completo" title="Permanent link">&para;</a></h1>
+<h2 id="inicializacao">Inicialização<a class="headerlink" href="#inicializacao" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-29-1"><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a>go<span class="w"> </span>mod<span class="w"> </span>init<span class="w"> </span>api-go
+</span></code></pre></div>
+<hr />
+<h2 id="instalacao-de-dependencia">Instalação de dependência<a class="headerlink" href="#instalacao-de-dependencia" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-30-1"><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a>go<span class="w"> </span>get<span class="w"> </span>github.com/gin-gonic/gin
+</span></code></pre></div>
+<hr />
+<h2 id="codigo-principal">Código principal<a class="headerlink" href="#codigo-principal" title="Permanent link">&para;</a></h2>
+<div class="language-go highlight"><pre><span></span><code><span id="__span-31-1"><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="kn">package</span><span class="w"> </span><span class="nx">main</span>
+</span><span id="__span-31-2"><a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a>
+</span><span id="__span-31-3"><a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="kn">import</span><span class="w"> </span><span class="s">&quot;fmt&quot;</span>
+</span><span id="__span-31-4"><a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a>
+</span><span id="__span-31-5"><a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="kd">func</span><span class="w"> </span><span class="nx">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-31-6"><a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a>
+</span><span id="__span-31-7"><a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="w">    </span><span class="nx">fmt</span><span class="p">.</span><span class="nx">Println</span><span class="p">(</span><span class="s">&quot;Projeto configurado com Go Modules&quot;</span><span class="p">)</span>
+</span><span id="__span-31-8"><a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="p">}</span>
+</span></code></pre></div>
+<hr />
+<h2 id="estrutura-final">Estrutura final<a class="headerlink" href="#estrutura-final" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>api-go/
+</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>├── go.mod
+</span><span id="__span-32-3"><a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a>├── go.sum
+</span><span id="__span-32-4"><a id="__codelineno-32-4" name="__codelineno-32-4" href="#__codelineno-32-4"></a>└── main.go
+</span></code></pre></div>
+<hr />
+<h2 id="proximos-passos">Próximos passos<a class="headerlink" href="#proximos-passos" title="Permanent link">&para;</a></h2>
+<p>Agora que aprendemos a gerenciar dependências em Go, o próximo passo é estudar testes automatizados.</p>
+<p>➡️ <a href="10-testes.html">Testes Automatizados</a></p>
+<hr />
+<h2 id="resumo">Resumo<a class="headerlink" href="#resumo" title="Permanent link">&para;</a></h2>
+<p>Nesta página aprendemos:</p>
+<ul>
+<li>O que são Go Modules</li>
+<li>Arquivo <code>go.mod</code></li>
+<li>Arquivo <code>go.sum</code></li>
+<li>Instalação de dependências</li>
+<li>Versionamento</li>
+<li>Estrutura de projetos</li>
+<li>Importação de pacotes</li>
+<li>Boas práticas</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Resumo Final</p>
+<p>Go Modules revolucionou o gerenciamento de dependências na linguagem Go, tornando projetos mais organizados, seguros e profissionais.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-circle-arrow-up" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m16 12-4-4-4 4M12 16V8"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="./08-channels.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: 08 - Channels">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7M19 12H5"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                08 - Channels
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="./10-testes.html" class="md-footer__link md-footer__link--next" aria-label="Next: 10 - Testes Automatizados">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                10 - Testes Automatizados
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="lucide lucide-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 2026 The authors
+
+    </div>
+  
+  
+    Made with
+    <a href="https://zensical.org/" target="_blank" rel="noopener">
+      Zensical
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate":null,"base":".","features":["announce.dismiss","content.code.annotate","content.code.copy","content.code.select","content.footnote.tooltips","content.tabs.link","content.tooltips","navigation.footer","navigation.indexes","navigation.instant","navigation.instant.prefetch","navigation.path","navigation.sections","navigation.top","navigation.tracking","search.highlight"],"search":"./assets/javascripts/workers/search.e2d2d235.min.js","tags":null,"translations":{"clipboard.copied":"Copied to clipboard","clipboard.copy":"Copy to clipboard","search.result.more.one":"1 more on this page","search.result.more.other":"# more on this page","search.result.none":"No matching documents","search.result.one":"1 matching document","search.result.other":"# matching documents","search.result.placeholder":"Type to start searching","search.result.term.missing":"Missing","select.version":"Select version"},"version":null}</script>
+    
+    
+      <script src="./assets/javascripts/bundle.dbc0afdc.min.js"></script>
+      
+    
+  </body>
+</html>
