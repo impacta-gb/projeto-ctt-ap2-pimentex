@@ -34,9 +34,7 @@ Além da criação das páginas de documentação, o projeto teve como foco prin
 
 ##  Site Publicado
 
-> ```text
-https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/
-```
+[Documentação Go](https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/)
 
 ---
 
