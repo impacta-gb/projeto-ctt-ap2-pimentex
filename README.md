@@ -218,7 +218,7 @@ python -m zensical serve
 O projeto ficará disponível em:
 
 ```text
-http://localhost:8000
+https://impacta-gb.github.io/projeto-ctt-ap2-pimentex/
 ```
 
 ---
